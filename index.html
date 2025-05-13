@@ -2,63 +2,176 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Serra Negra: A Semana da Sombra</title>
+  <title>Serra Negra: Turno em Andamento</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Fonte Gótica -->
+  <!-- Fonte gótica -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      padding: 0;
+      font-family: 'Cinzel', serif;
       background-color: #0b0b0b;
       color: #dcdcdc;
-      font-family: 'Cinzel', serif;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
       height: 100vh;
-      overflow: hidden;
+    }
+
+    header {
+      background-color: #1a0000;
+      padding: 10px 20px;
       text-align: center;
+      border-bottom: 2px solid #440000;
     }
 
-    h1 {
-      font-size: 2.8rem;
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
       color: #ff4c4c;
-      margin-bottom: 10px;
-      text-shadow: 0 0 10px #440000;
     }
 
-    p {
-      font-size: 1rem;
-      color: #bbb;
-      max-width: 600px;
-      margin-bottom: 40px;
+    main {
+      flex: 1;
+      display: flex;
     }
 
-    button {
-      padding: 14px 30px;
-      font-size: 1.1rem;
-      font-family: 'Cinzel', serif;
+    section {
+      flex: 3;
+      padding: 20px;
+      border-right: 1px solid #222;
+    }
+
+    aside {
+      flex: 1;
+      background-color: #111;
+      padding: 20px;
+      border-left: 1px solid #222;
+    }
+
+    .turno-info {
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    .narrativa {
+      background-color: #1a1a1a;
+      padding: 15px;
+      border: 1px solid #333;
+      margin-bottom: 20px;
+      min-height: 180px;
+    }
+
+    .acoes {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .acoes button {
+      padding: 12px;
       background-color: #440000;
       color: #fff;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       cursor: pointer;
-      box-shadow: 0 0 10px #220000;
-      transition: all 0.3s ease;
+      transition: 0.3s;
+      font-size: 1rem;
     }
 
-    button:hover {
+    .acoes button:hover {
       background-color: #660000;
-      box-shadow: 0 0 15px #990000;
+    }
+
+    .input-livre {
+      margin-top: 10px;
+    }
+
+    .input-livre input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #444;
+      background-color: #222;
+      color: #fff;
+    }
+
+    aside h2 {
+      font-size: 1.2rem;
+      color: #ff4c4c;
+      margin-bottom: 10px;
+    }
+
+    aside ul {
+      padding-left: 15px;
+    }
+
+    aside ul li {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .btn-gpt {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #440000;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      width: 100%;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .btn-gpt:hover {
+      background-color: #660000;
     }
   </style>
 </head>
 <body>
-  <h1>SERRA NEGRA</h1>
-  <p>“A Semana da Sombra começa agora. Prepare-se para sobreviver por sete dias em uma cidade que respira névoa e morte.”</p>
-  <button onclick="abrirPopup()">INVOCAR BARBALUSS</button>
+
+  <header>
+    <h1>TURNO EM ANDAMENTO</h1>
+  </header>
+
+  <main>
+    <section>
+      <div class="turno-info">
+        <strong>Local:</strong> Praça dos Corvos <br>
+        <strong>Período:</strong> Manhã | <strong>Dia:</strong> 1 de 7 <br>
+        <strong>PS Atual:</strong> 1 | <strong>Condição:</strong> Normal
+      </div>
+
+      <div class="narrativa">
+        As estátuas parecem te observar enquanto o vento arrasta folhas mortas. Um uivo ecoa entre os telhados. A sombra de algo se move na viela à esquerda.
+      </div>
+
+      <div class="acoes">
+        <button>A: Investigar a viela</button>
+        <button>B: Subornar o taverneiro</button>
+        <button>C: Trancar-se na hospedaria</button>
+
+        <div class="input-livre">
+          <input type="text" placeholder="Descreva outra ação...">
+        </div>
+      </div>
+    </section>
+
+    <aside>
+      <h2>COMANDOS ÚTEIS</h2>
+      <ul>
+        <li>- MOSTRE HABILIDADES</li>
+        <li>- MOSTRE INVENTARIO</li>
+        <li>- GERE UMA IMAGEM DA CENA</li>
+      </ul>
+
+      <button class="btn-gpt" onclick="abrirPopup()">INVOCAR BARBALUSS</button>
+    </aside>
+  </main>
 
   <script>
     function abrirPopup() {
@@ -68,11 +181,12 @@
       const topo = (screen.height - altura) / 2;
 
       window.open(
-        "https://chat.openai.com/g/g-681a79eadf848191a9361087e8259551-barbaluss",  // GPT personalizado
+        "https://chat.openai.com/g/g-681a79eadf848191a9361087e8259551-barbaluss",
         "Barbaluss",
         `width=${largura},height=${altura},top=${topo},left=${esquerda},resizable=no`
       );
     }
   </script>
+
 </body>
 </html>
