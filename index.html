@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Serra Negra: A Semana da Sombra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonte Gótica -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0b0b0b;
+      color: #dcdcdc;
+      font-family: 'Cinzel', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #ff4c4c;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #440000;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #bbb;
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+
+    button {
+      padding: 14px 30px;
+      font-size: 1.1rem;
+      font-family: 'Cinzel', serif;
+      background-color: #440000;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #220000;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #660000;
+      box-shadow: 0 0 15px #990000;
+    }
+  </style>
+</head>
+<body>
+  <h1>SERRA NEGRA</h1>
+  <p>“A Semana da Sombra começa agora. Prepare-se para sobreviver por sete dias em uma cidade que respira névoa e morte.”</p>
+  <button onclick="abrirPopup()">INVOCAR BARBALUSS</button>
+
+  <script>
+    function abrirPopup() {
+      const largura = 700;
+      const altura = 600;
+      const esquerda = (screen.width - largura) / 2;
+      const topo = (screen.height - altura) / 2;
+
+      window.open(
+        "https://chat.openai.com/g/g-681a79eadf848191a9361087e8259551-barbaluss",  // GPT personalizado
+        "Barbaluss",
+        `width=${largura},height=${altura},top=${topo},left=${esquerda},resizable=no`
+      );
+    }
+  </script>
+</body>
+</html>
