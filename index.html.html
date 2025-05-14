@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <title>Serra Negra: A Semana da Sombra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #0b0b0b;
+      color: #dcdcdc;
+    }
+
+    header {
+      background-color: #1a0000;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #440000;
+    }
+
+    header h1 {
+      color: #ff4c4c; 
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    main {
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    section, aside {
+      background-color: #121212;
+      padding: 20px;
+      border: 1px solid #2d2d2d;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #290000;
+    }
+
+    section {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    aside {
+      width: 250px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chatbox {
+      background-color: #1b1b1b;
+      height: 720px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.8rem;
+      color: #777;
+      background-color: #0e0e0e;
+      border-top: 1px solid #220000;
+    }
+
+    .gothic-font {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SERRA NEGRA: A SEMANA DA SOMBRA</h1>
+    <p class="gothic-font" style="color: #aaa;">Você tem 7 dias. Sobreviva... ou será engolido pela névoa.</p>
+  </header>
+
+  <main>
+    <aside>
+      <div class="comandos">
+        <h2 class="gothic-font" style="color: #ff4c4c;">⚙️ Comandos úteis durante a campanha</h2>
+        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.9rem; color: #ccc; padding-top: 10px;">
+          <div>- <strong>Mostre habilidades</strong><br/><span style="color:#888;">Mostra suas habilidades atuais e tempo de recarga.</span></div>
+          <div>- <strong>Mostre inventário</strong><br/><span style="color:#888;">Mostra seu inventário atual.</span></div>
+          <div>- <strong>Gere uma imagem da cena</strong><br/><span style="color:#888;">Gera uma imagem da cena atual.</span></div>
+          <div>- <strong>Resuma a aventura</strong><br/><span style="color:#888;">Resumo narrativo da campanha até agora.</span></div>
+        </div>
+      </div>
+      <div class="notas" style="margin-top: 20px; display: flex; flex-direction: column; align-items: center;">
+        <h2 class="gothic-font" style="color: #ff4c4c;">🕯️ Bloco de notas sombrio</h2>
+        <textarea id="blocoNotas" placeholder="Escreva seus segredos, códigos ou qualquer coisa que achar importante..." style="width:100%; height:240px; padding:12px; background:#0d0d0d; color:#ccc; border:1px solid #333; border-radius:5px;"></textarea>
+      </div>
+    </aside>
+
+    <section>
+      <div class="chatbox" id="chatbox">
+        <iframe
+          src="https://www.chatbase.co/chatbot-iframe/AER5JAJgggBs2elRtZRZR"
+          width="100%"
+          height="100%"
+          style="border: none; border-radius: 12px;"
+          allow="clipboard-write clipboard-read">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Jogo desenvolvido por SNIPE · Sistema oficial de RPG narrativo Serra Negra 7.0 · <a href="https://serra-negra-a-semana-da-sombra.fandom.com/pt-br/wiki/Serra_Negra:_A_Semana_da_Sombra_Wiki" target="_blank" style="color:#ff4c4c; text-decoration:none;">Acesse a Wiki</a> · <a href="https://chatgpt.com/g/g-681cf8c096a88191b1b16629e30d95cc-a-semana-da-sombra" target="_blank" style="color:#ff4c4c; text-decoration:none;">Versão GPT Plus</a>
+  </footer>
+</body>
+</html>
